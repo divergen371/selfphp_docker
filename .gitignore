@@ -1,3 +1,2 @@
 /.vscode
-/mariadb
-/php
+/mariadb/data
