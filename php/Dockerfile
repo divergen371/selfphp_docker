@@ -21,7 +21,7 @@ RUN a2enconf fqdn
 COPY --from=composer/composer:latest-bin /composer /usr/bin/composer
 # ④ 自作の設定ファイル「myphp.ini」「docker-php-ext-xdebug.ini」をPHPコンテナに適用させる
 COPY myphp.ini /usr/local/etc/php/conf.d
-COPY docker-php-ext-xdebug.ini /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+# COPY docker-php-ext-xdebug.ini /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 # ⑤ PHPコンテナ内に入った時のカレントディレクトリを指定
 WORKDIR /var/www/html
 EXPOSE 80
